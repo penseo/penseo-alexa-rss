@@ -1,10 +1,8 @@
 ## Running it locally
 
+```bash
+gem install bundler
+bundle
+bundle exec foreman start
+open http://localhost:5000
 ```
-$ git clone git://github.com/scottmotte/sinatra-heroku-cedar-template.git
-$ gem install bundler
-$ bundle
-$ bundle exec foreman start
-```
-
-Navigate to localhost:5000
