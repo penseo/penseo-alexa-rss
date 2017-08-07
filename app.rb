@@ -3,7 +3,7 @@ require 'open-uri'
 
 get '/' do
   content_type 'application/rss+xml'
-  url = 'https://www.penseo.de/post/rss.xml'
+  url = params['url'] || 'https://www.penseo.de/post/rss.xml'
   open(url) do |rss|
     feed = RSS::Parser.parse(rss)
     rss = RSS::Maker.make("atom") do |maker|
